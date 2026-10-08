@@ -7,6 +7,12 @@ public static void main(String[] args) {
     System.out.println(indexOf(numbers, 9));
     System.out.println(lastIndexOf(numbers, 9));
     System.out.println(lastIndexOf(numbers, 7));
+    System.out.println(largest(new int[]{4, 9, 2, 7}));
+    System.out.println(largest(new int[]{-6, -2, -9}));
+    System.out.println(largest(new int[]{7}));
+    System.out.println(smallest(new int[]{4, 9, 2, 7}));
+    System.out.println(smallest(new int[]{-6, -2, -9}));
+    System.out.println(smallest(new int[]{7}));
 }
 
     public static int countAbove(int[] numbers, int limit){
@@ -45,4 +51,24 @@ public static void main(String[] args) {
         }
     return lastIndex;
     }
+
+    public static int largest(int[] numbers){
+    int largest = numbers[0];
+    for (int i = 1; i < numbers.length; i++){
+        if (numbers[i] > largest){
+            largest = numbers[i];
+        }
+    }
+    return largest;
+    }
+    
+    public static int smallest(int[] numbers){
+    int smallest = numbers[0];
+    for (int i = 1; i < numbers.length; i++){
+        if (numbers[i] < smallest){
+            smallest = numbers[i];
+       }
+    }
+        return smallest;
+    } 
 }
